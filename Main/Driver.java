@@ -7,9 +7,9 @@ public class Driver {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter your first name");
-        String firstName = sc.nextLine().replaceAll(" ", "");
+        String firstName = sc.nextLine();
         System.out.println("Please enter your last name");
-        String lastName = sc.nextLine().replaceAll(" ", "");;
+        String lastName = sc.nextLine();
         System.out.println("Please enter the department from the following");
         System.out.println("1. Technical");
         System.out.println("2. Admin");
