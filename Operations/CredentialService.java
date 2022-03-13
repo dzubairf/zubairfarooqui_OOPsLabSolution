@@ -23,9 +23,6 @@ public class CredentialService {
                 System.out.println("undefined");
         }
     }
-    public String getDepartment() {
-        return department;
-    }
     public String generateEmailAddress(String firstName, String lastName){
         this.email = firstName + lastName + "@" + this.department + "." + this.domain;
         return email;
