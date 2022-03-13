@@ -1,7 +1,6 @@
 package Main;
 import Employee.Employee;
 import Operations.CredentialService;
-import jdk.dynalink.Operation;
 import java.util.Scanner;
 
 public class Driver {
@@ -21,8 +20,6 @@ public class Driver {
         CredentialService credentialService =  new CredentialService();
         // Setting Department
         credentialService.setDepartment(departmentNo);
-        // getting Department
-        String department = credentialService.getDepartment();
         // Generating email address
         String email = credentialService.generateEmailAddress(firstName, lastName);
         // Generating Password
