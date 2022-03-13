@@ -1,10 +1,10 @@
 package Operations;
 import java.util.Random;
 public class CredentialService {
-    private String email;
-    private String password = "";
-    private final String domain = "mygreatlearning.com" ;
-    private String department;
+    String email;
+    String password = "";
+    final String domain = "mygreatlearning.com" ;
+    String department;
     public void setDepartment(int department) {
         switch (department){
             case 1:
