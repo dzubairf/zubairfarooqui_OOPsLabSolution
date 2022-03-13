@@ -3,7 +3,7 @@ import java.util.Random;
 public class CredentialService {
     private String email;
     private String password = "";
-    private String domain = "greatlerning.in" ;
+    private final String domain = "mygreatlearning.com" ;
     private String department;
     public void setDepartment(int department) {
         switch (department){
@@ -38,19 +38,19 @@ public class CredentialService {
         Random random = new Random();
         for (int j = 0; j < 2; j++){
             Character selected = capitalChar.charAt(random.nextInt(capitalChar.length()));
-            this.password = this.password + selected;
+            this.password = this.password.concat(String.valueOf(selected));
         }
         for (int k = 0; k < 2; k++){
             Character selected = number.charAt(random.nextInt(number.length()));
-            this.password = this.password + selected;
+            this.password = this.password.concat(String.valueOf(selected));
         }
         for (int l = 0; l < 2; l++){
             Character selected = specialChar.charAt(random.nextInt(specialChar.length()));
-            this.password = this.password + selected;
+            this.password = this.password.concat(String.valueOf(selected));
         }
         for (int m = 0; m < 2; m++){
             Character selected = smallChar.charAt(random.nextInt(smallChar.length()));
-            this.password = this.password + selected;
+            this.password = this.password.concat(String.valueOf(selected));
         }
         return password;
     }

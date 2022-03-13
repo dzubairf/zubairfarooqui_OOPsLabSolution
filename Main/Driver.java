@@ -23,11 +23,11 @@ public class Driver {
         credentialService.setDepartment(departmentNo);
         // getting Department
         String department = credentialService.getDepartment();
-        //Generating email address
+        // Generating email address
         String email = credentialService.generateEmailAddress(firstName, lastName);
+        // Generating Password
         String password =  credentialService.generatePassword();
         System.out.println("Email --> " + email);
         System.out.println("Password --> " + password);
-
     }
 }
