@@ -24,7 +24,7 @@ public class CredentialService {
         }
     }
     public String generateEmailAddress(String firstName, String lastName){
-        this.email = firstName + lastName + "@" + this.department + "." + this.domain;
+        this.email = (firstName + lastName + "@" + this.department + "." + this.domain).replaceAll(" ", "");
         return email;
     }
     public String generatePassword(){
