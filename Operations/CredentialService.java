@@ -35,13 +35,10 @@ public class CredentialService {
         Random random = new Random();
         for (int j = 0; j < 2; j++){
             String selectedCapitalChar = String.valueOf(capitalChar.charAt(random.nextInt(capitalChar.length())));
-            this.password = this.password.concat(selectedCapitalChar);
             Character selectedNumber = number.charAt(random.nextInt(number.length()));
-            this.password = this.password.concat(String.valueOf(selectedNumber));
             Character selectedSpecialChar = specialChar.charAt(random.nextInt(specialChar.length()));
-            this.password = this.password.concat(String.valueOf(selectedSpecialChar));
             Character selectedSmallChar = smallChar.charAt(random.nextInt(smallChar.length()));
-            this.password = this.password.concat(String.valueOf(selectedSmallChar));
+            this.password = this.password + selectedCapitalChar + selectedSpecialChar + selectedNumber + selectedSmallChar;
         }
         return password;
     }
