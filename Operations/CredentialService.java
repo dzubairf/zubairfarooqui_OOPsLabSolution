@@ -34,14 +34,14 @@ public class CredentialService {
         String specialChar = "!@#$%^&*.,;:+='";
         Random random = new Random();
         for (int j = 0; j < 2; j++){
-            String selected = String.valueOf(capitalChar.charAt(random.nextInt(capitalChar.length())));
-            this.password = this.password.concat(selected);
-            Character selected1 = number.charAt(random.nextInt(number.length()));
-            this.password = this.password.concat(String.valueOf(selected1));
-            Character selected2 = specialChar.charAt(random.nextInt(specialChar.length()));
-            this.password = this.password.concat(String.valueOf(selected2));
-            Character selected3 = smallChar.charAt(random.nextInt(smallChar.length()));
-            this.password = this.password.concat(String.valueOf(selected3));
+            String selectedCapitalChar = String.valueOf(capitalChar.charAt(random.nextInt(capitalChar.length())));
+            this.password = this.password.concat(selectedCapitalChar);
+            Character selectedNumber = number.charAt(random.nextInt(number.length()));
+            this.password = this.password.concat(String.valueOf(selectedNumber));
+            Character selectedSpecialChar = specialChar.charAt(random.nextInt(specialChar.length()));
+            this.password = this.password.concat(String.valueOf(selectedSpecialChar));
+            Character selectedSmallChar = smallChar.charAt(random.nextInt(smallChar.length()));
+            this.password = this.password.concat(String.valueOf(selectedSmallChar));
         }
         return password;
     }
